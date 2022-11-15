@@ -8,14 +8,14 @@ pipeline {
         stage('Build') { 
             steps {
                 //container('mkdocs') {
-                    "docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material build"
+                    docker run --rm -it -v "${PWD}:/docs" squidfunk/mkdocs-material build
                 //}
             }
         }
         stage('deploy') { 
             steps {
                 //container('mkdocs') {
-                    "docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material gh-deploy"
+                   docker run --rm -it -v "${PWD}:/docs" squidfunk/mkdocs-material gh-deploy
                 //}
             }
         }
