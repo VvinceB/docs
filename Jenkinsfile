@@ -7,17 +7,17 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                container('mkdocs') {
+//                container('mkdocs') {
                     sh 'build'
-                }
+//                }
             }
         }
         stage('deploy') { 
             steps { 
-                container('mkdocs') {
+//                container('mkdocs') {
                     sh 'gh-deploy'
                 }
-            }
+//            }
         }
     }
 }
