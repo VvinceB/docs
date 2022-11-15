@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://vvinceb.github.io/docs/">
+        <link rel="canonical" href="https://vvinceb.github.io/docs/dataMgmt/">
       
-      <link rel="icon" href="images/favicon.png">
+      <link rel="icon" href="../images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.9">
     
     
       
-        <title>FIP doc</title>
+        <title>Data management - FIP doc</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.08040f6c.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -39,7 +39,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs-vincent" class="md-skip">
+        <a href="#data-management" class="md-skip">
           Skip to content
         </a>
       
@@ -84,9 +84,9 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="FIP doc" class="md-header__button md-logo" aria-label="FIP doc" data-md-component="logo">
+    <a href=".." title="FIP doc" class="md-header__button md-logo" aria-label="FIP doc" data-md-component="logo">
       
-  <img src="assets/logo.png" alt="logo">
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Data management
             
           </span>
         </div>
@@ -180,12 +180,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href=".." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -194,10 +192,12 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="dataMgmt/" class="md-tabs__link">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
       Data management
     </a>
   </li>
@@ -209,7 +209,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="feeder/" class="md-tabs__link">
+    <a href="../feeder/" class="md-tabs__link">
       Feeder
     </a>
   </li>
@@ -221,7 +221,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="consumer/" class="md-tabs__link">
+    <a href="../consumer/" class="md-tabs__link">
       Consumer
     </a>
   </li>
@@ -254,15 +254,30 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="FIP doc" class="md-nav__button md-logo" aria-label="FIP doc" data-md-component="logo">
+    <a href=".." title="FIP doc" class="md-nav__button md-logo" aria-label="FIP doc" data-md-component="logo">
       
-  <img src="assets/logo.png" alt="logo">
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     FIP doc
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
     
       
       
@@ -282,12 +297,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home
+          Data management
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
-        Home
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Data management
       </a>
       
         
@@ -306,15 +321,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#data-architecture" class="md-nav__link">
+    Data architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Data architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rawlake" class="md-nav__link">
+    RAW/LAKE
+  </a>
+  
+    <nav class="md-nav" aria-label="RAW/LAKE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raw-architecture" class="md-nav__link">
+    RAW architecture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lake-architecture" class="md-nav__link">
+    LAKE architecture
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-format" class="md-nav__link">
+    File format
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#access-management" class="md-nav__link">
+    Access management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-audit" class="md-nav__link">
+    Access audit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    Availability
   </a>
   
 </li>
@@ -335,22 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dataMgmt/" class="md-nav__link">
-        Data management
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="feeder/" class="md-nav__link">
+      <a href="../feeder/" class="md-nav__link">
         Feeder
       </a>
     </li>
@@ -365,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="consumer/" class="md-nav__link">
+      <a href="../consumer/" class="md-nav__link">
         Consumer
       </a>
     </li>
@@ -399,15 +453,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#data-architecture" class="md-nav__link">
+    Data architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Data architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rawlake" class="md-nav__link">
+    RAW/LAKE
+  </a>
+  
+    <nav class="md-nav" aria-label="RAW/LAKE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raw-architecture" class="md-nav__link">
+    RAW architecture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lake-architecture" class="md-nav__link">
+    LAKE architecture
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-format" class="md-nav__link">
+    File format
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#access-management" class="md-nav__link">
+    Access management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-audit" class="md-nav__link">
+    Access audit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    Availability
   </a>
   
 </li>
@@ -427,43 +535,36 @@
                   
 
 
-<h1 id="welcome-to-mkdocs-vincent">Welcome to MkDocs VINCENT!</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="data-management">Data Management</h1>
+<h2 id="data-architecture">Data architecture</h2>
+<h3 id="rawlake">RAW/LAKE</h3>
+<h4 id="raw-architecture">RAW architecture</h4>
+<h4 id="lake-architecture">LAKE architecture</h4>
+<h2 id="file-format">File format</h2>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li>Avoid AVRO</li>
+<li>Prefer PARQUET (most performant)</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
-<hr />
-<h1 id="material-theme">Material theme</h1>
-<p>Make a change to docs/index.md, and publish the first version:</p>
-<pre><code>mike deploy --push --update-aliases 0.1 latest
-</code></pre>
-<p>Set the default version to latest</p>
-<pre><code>mike set-default --push latest
-</code></pre>
-<p>Now, make another change and publish a new version:</p>
-<pre><code>mike deploy --push --update-aliases 0.2 latest
-</code></pre>
+<h2 id="access-management">Access management</h2>
+<p>Project are autonomous for their data organisation since the level #??</p>
+<h2 id="access-audit">Access audit</h2>
+<h2 id="availability">Availability</h2>
+<ul>
+<li>RTO:</li>
+<li>RPO:</li>
+</ul>
+<h1 id="toto">toto</h1>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 14, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 14, 2022</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>
@@ -492,15 +593,30 @@ docs/
     
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="dataMgmt/" class="md-footer__link md-footer__link--next" aria-label="Next: Data management" rel="next">
+        <a href="../feeder/" class="md-footer__link md-footer__link--next" aria-label="Next: Feeder" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Data management
+              Feeder
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -531,10 +647,10 @@ docs/
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.top", "toc.follow"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.top", "toc.follow"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>
