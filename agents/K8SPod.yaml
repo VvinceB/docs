@@ -3,7 +3,7 @@ metadata:
     some-label: jenkins-agents
 spec:
   containers:
-#  - name: jnlp
+  - name: jnlp
   - name: mkdocs
     image: squidfunk/mkdocs-material:latest
     command:
