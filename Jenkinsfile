@@ -7,16 +7,16 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                container('mkdocs') {
-                    sh 'mkdocs build' 
-                }
+                //container('mkdocs') {
+                    docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material build
+                //}
             }
         }
         stage('deploy') { 
             steps {
-                container('mkdocs') {
-                    sh 'mkdocs gh-deploy --force' 
-                }
+                //container('mkdocs') {
+                    docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material gh-deploy
+                //}
             }
         }
     }

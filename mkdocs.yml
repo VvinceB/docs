@@ -2,8 +2,9 @@ site_name: FIP doc
 site_url: https://vvinceb.github.io/docs/
 nav:
   - Home: index.md
-  - About: about.md
-
+  - Data management: dataMgmt.md
+  - Feeder: feeder.md
+  - Consumer: consumer.md
 theme:
   name: material
   language: en
