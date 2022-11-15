@@ -10,4 +10,7 @@ spec:
     - sleep
     args:
     - 99d
+    volumeMounts:
+    - mountPath: ${PWD}
+      name: /docs
     
