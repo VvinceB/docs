@@ -6,16 +6,16 @@ pipeline {
   }
     stages {
         stage('Build') { 
-            container('mkdocs') {
-                steps {
-                    build
+            steps {
+                container('mkdocs') {
+                    sh 'build'
                 }
             }
         }
         stage('deploy') { 
-            container('mkdocs') {
-                steps {
-                    gh-deploy
+            steps { 
+                container('mkdocs') {
+                    sh 'gh-deploy'
                 }
             }
         }
