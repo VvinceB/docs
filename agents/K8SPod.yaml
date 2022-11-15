@@ -11,6 +11,10 @@ spec:
     args:
     - 99d
     volumeMounts:
-    - mountPath: ${PWD}
-      name: /docs
-    
+    - mountPath: /docs
+      name: voldocs
+  volumes:
+  - hostPath:
+      path: ${PWD}
+      type: Directory
+    name: voldocs   
