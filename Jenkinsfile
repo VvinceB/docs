@@ -1,23 +1,39 @@
-pipeline {
-  agent {
-    kubernetes {
-      yamlFile 'agents/K8SPod.yaml'
-    }
-  }
-    stages {
-        stage('Build') { 
-            steps {
-//                container('mkdocs') {
-                    sh 'build'
-//                }
+podTemplate(yamlFile:"./agents/K8SPod"){
+    node(POD_LABEL) {
+        stages {
+            stage ('init'){
+                def dockerEndpoint="tcp://192.168.23.17:2376"
+
+                echo "docker endpoint is set to :$dockerEndpoint"
+                
+                def image="squidfunk/mkdocs-material:latest"
+                def volumes="$WORKSPACE:/docs"
+                def options="-it --rm"
+
+                echo "using container from image $image (volumes=$volumes ,options=$options)" 
+
+                def workspace = WORKSPACE
+                echo "Current workspace is $workspace"
             }
-        }
-        stage('deploy') { 
-            steps { 
-//                container('mkdocs') {
-                    sh 'gh-deploy'
+            stage('Pull') { 
+                steps {
+                    checkout scm
                 }
-//            }
+            }
+            stage('Build') { 
+                steps {
+                    docker.withServer(dockerEndpoint) {
+                        docker.image(image).run("-v $volumes $options","build")
+                    }
+                }
+            }
+            stage('deploy') { 
+                steps { 
+                    docker.withServer(dockerEndpoint) {
+                        docker.image(image).run("-v $volumes $options","gh-deploy")
+                    }
+                }
+            }
         }
     }
 }

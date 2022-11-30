@@ -1,20 +1,10 @@
-metadata:
-  labels:
-    some-label: jenkins-agents
+apiVersion: v1
+kind: Pod
 spec:
   containers:
-  - name: jnlp
-  - name: mkdocs
-    image: squidfunk/mkdocs-material:latest
+  - name: dockergw
+    image: docker:19.03.1
     command:
-    - sleep
+    - cat
     args:
     - 99d
-    volumeMounts:
-    - mountPath: /docs
-      name: voldocs
-  volumes:
-  - hostPath:
-      path: ${PWD}
-      type: Directory
-    name: voldocs   
