@@ -1,5 +1,5 @@
-podTemplate(yamlFile:"./agents/K8SPod"){
-    node(POD_LABEL) {
+node(POD_LABEL) {
+    podTemplate(yaml: readFile("./agents/K8SPod")){
         stages {
             stage ('init'){
                 def dockerEndpoint="tcp://192.168.23.17:2376"
