@@ -31,16 +31,24 @@ spec:
             echo('Build') 
             
             docker.withServer(dockerEndpoint) {
-                docker.image(image).run("-v $volumes $options","build")
-                sh "docker logs $name"
-                sh "docker rm $name"
+                try {
+                    docker.image(image).run("-v $volumes $options","build")
+                    sh "docker logs $name"
+                }
+                finally{
+                    sh "docker rm $name"
+                }
             }
             
             echo 'Deploy'  
             docker.withServer(dockerEndpoint) {
-                docker.image(image).run("-v $volumes $options","gh-deploy")
-                sh "docker logs $name"
-                sh "docker rm $name"
+                try {
+                    docker.image(image).run("-v $volumes $options","gh-deploy")
+                    sh "docker logs $name"
+                }
+                finally{
+                    sh "docker rm $name"
+                }
             }
         }
     }
