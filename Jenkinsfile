@@ -30,12 +30,11 @@ spec:
             
             docker.withServer(dockerEndpoint) {
                 docker.image(image).run("-v $volumes $options","build")
-                }
+            }
             
-            echo 'Deploy' { 
-                docker.withServer(dockerEndpoint) {
+            echo 'Deploy'  
+            docker.withServer(dockerEndpoint) {
                 docker.image(image).run("-v $volumes $options","gh-deploy")
-                }
             }
         }
     }
