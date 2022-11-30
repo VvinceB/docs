@@ -6,7 +6,7 @@ spec:
   - name: dockergw
     image: docker:19.03.1
     command:
-    - cat
+    - sleep
     args:
     - 99d
 '''){
