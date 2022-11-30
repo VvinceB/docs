@@ -32,14 +32,14 @@ spec:
             
             docker.withServer(dockerEndpoint) {
                 docker.image(image).run("-v $volumes $options","build")
-                sh "docker logs $docker.Image.id"
+                sh "docker logs $name"
                 sh "docker rm $name"
             }
             
             echo 'Deploy'  
             docker.withServer(dockerEndpoint) {
                 docker.image(image).run("-v $volumes $options","gh-deploy")
-                sh "docker logs $docker.Image.id"
+                sh "docker logs $name"
                 sh "docker rm $name"
             }
         }
