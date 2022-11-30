@@ -27,7 +27,6 @@ spec:
             echo "Current workspace is $workspace"
             
             checkout scm
-            ll
             echo('Build') 
             
             docker.withServer(dockerEndpoint) {
