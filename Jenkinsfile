@@ -33,6 +33,7 @@ spec:
             docker.withServer(dockerEndpoint) {
                 try {
                     docker.image(image).run("-v $volumes $options","build")
+                    sh "sleep 10"
                     sh "docker logs $name"
                 }
                 finally{
@@ -44,6 +45,7 @@ spec:
             docker.withServer(dockerEndpoint) {
                 try {
                     docker.image(image).run("-v $volumes $options","gh-deploy")
+                    sh "sleep 20"
                     sh "docker logs $name"
                 }
                 finally{
