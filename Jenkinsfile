@@ -18,7 +18,8 @@ spec:
             
             def image="squidfunk/mkdocs-material:latest"
             def volumes="$WORKSPACE:/docs"
-            def options="-it --rm"
+            def name="coco"
+            def options="-it --name $name"
 
             echo "using container from image $image (volumes=$volumes ,options=$options)" 
 
@@ -26,15 +27,20 @@ spec:
             echo "Current workspace is $workspace"
             
             checkout scm
+            ll
             echo('Build') 
             
             docker.withServer(dockerEndpoint) {
                 docker.image(image).run("-v $volumes $options","build")
+                docker logs docker.Image.id
+                docker rm $name
             }
             
             echo 'Deploy'  
             docker.withServer(dockerEndpoint) {
                 docker.image(image).run("-v $volumes $options","gh-deploy")
+                docker logs docker.Image.id
+                docker rm $name
             }
         }
     }
