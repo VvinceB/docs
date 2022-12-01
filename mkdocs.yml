@@ -1,5 +1,6 @@
 site_name: FIP doc
 site_url: https://vvinceb.github.io/docs/
+site_author: vince
 nav:
   - Home: index.md
   - Data management: dataMgmt.md

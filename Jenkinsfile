@@ -1,3 +1,5 @@
+ansiColor('xterm') 
+
 podTemplate(yaml:'''
 apiVersion: v1
 kind: Pod
